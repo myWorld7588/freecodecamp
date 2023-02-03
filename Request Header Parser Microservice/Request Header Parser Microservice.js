@@ -27,3 +27,34 @@ app.use(express.static('public'));
 app.get("/", function (req, res) {
   res.sendFile(__dirname + '/views/index.html');
 });
+
+
+
+// API endpoint
+// For APIs, an endpoint can include a URL of a server or service. 
+// Each endpoint is the location from which APIs can access the resources they need to carry out their function.
+
+app.get("/api/hello", function (req, res) {
+  res.json({greeting: 'hello API'});
+});
+
+// listen for requests
+var listener = app.listen(process.env.PORT, function () {
+  console.log('Your app is listening on port ' + listener.address().port);
+});
+
+
+// *** SOLUTION ***
+
+app.get("/api/whoami", (req, res) => {
+  const response = {
+    ipaddress: req.ip,
+    language: req.headers["accept-language"],
+    software: req.headers["user-agent"]
+  }
+  // console.log(JSON.stringify(req.headers, null, 2))
+  console.log(JSON.stringify(response, null, 2))
+  res.json(response)
+})
+
+// *** END SOLUTION ***
