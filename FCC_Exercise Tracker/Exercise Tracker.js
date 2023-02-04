@@ -187,6 +187,7 @@ app.post('/api/users/:_id/exercises', (req, res) => {
 
 
 // #3 
+// a GET request to /api/users/:_id/logs to retrieve a full exercise log of any user.
 
 app.get('/api/users/:_id/logs', (req, res) => {
   const { from, to, limit } = req.query;
