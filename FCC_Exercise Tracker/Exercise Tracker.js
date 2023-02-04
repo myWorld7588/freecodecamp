@@ -55,5 +55,31 @@ You can add from, to and limit parameters to a GET /api/users/:_id/logs request 
 
 
 
+const mySecret = process.env['MONGO_URI']
+const express = require('express')
+const app = express()
+const cors = require('cors')
+require('dotenv').config()
+
+const mongoose = require('mongoose')
+const { Schema } = mongoose;
+
+const userSchema = new Schema({
+  "username": String,
+})
+
+const exerciseSchema = new Schema({
+  "username": String,
+  "date": Date,
+  "duration": Number,
+  "description": String,
+})
+
+const logSchema = new Schema({
+  "username": String,
+  "count": Number,
+  "log": Array,
+})
+
 
 
