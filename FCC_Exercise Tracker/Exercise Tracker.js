@@ -227,6 +227,8 @@ app.get('/api/users/:_id/logs', (req, res) => {
           console.log("error with query=> ", err);
         } else {
 
+          // Each item in the log array that is returned from GET /api/users/:_id/logs is an object that should have a description, duration, and date properties
+          
           let documents = docs;
           let loggedArray = documents.map((item) => {
             return {
