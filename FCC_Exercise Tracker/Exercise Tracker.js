@@ -68,6 +68,7 @@ const userSchema = new Schema({
   "username": String,
 })
 
+// Exercise: Structure
 const exerciseSchema = new Schema({
   "username": String,
   "date": Date,
@@ -75,6 +76,8 @@ const exerciseSchema = new Schema({
   "description": String,
 })
 
+
+// Log: Structure
 const logSchema = new Schema({
   "username": String,
   "count": Number,
