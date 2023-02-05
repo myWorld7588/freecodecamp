@@ -1,6 +1,8 @@
 // initialize project
 var express = require('express');
 var cors = require('cors');
+
+// Multer npm package to handle file uploading.
 var multer = require('multer');
 require('dotenv').config()
 
