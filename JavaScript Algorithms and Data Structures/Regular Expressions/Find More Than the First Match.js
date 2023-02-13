@@ -18,3 +18,7 @@ testStr.match(repeatRegex);
 // Note
 // You can have multiple flags on your regex like /search/gi
 
+let twinkleStar = "Twinkle, twinkle, little star";
+let starRegex = /twinkle/gi; // Change this line
+let result = twinkleStar.match(starRegex); // Change this line
+
